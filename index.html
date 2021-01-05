@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="css/mdui.min.css"/>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body class="mdui-theme-primary-blue-grey mdui-theme-accent-orange mdui-appbar-with-toolbar mdui-drawer-body-left">
+    <header class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target:'#main-drawer', swipe:true}"><i class="mdui-icon fa fa-bars" aria-hidden="true"></i></a>
+            <span class="mdui-typo-title">Bubble Sort</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="https://github.com/ojhdt/bubble-sort" target="_blank" class="mdui-btn mdui-btn-icon"><i class="mdui-icon fa fa-github" aria-hidden="true"></i></a>
+        </div>
+        </header>
+        <nav class="mdui-drawer" id="main-drawer">
+            <ul class="mdui-list" style="max-width: 360px;">
+            <a href="#">
+                <li class="mdui-list-item mdui-ripple" onclick="location.reload()">
+                    <i class="mdui-icon fa fa-refresh" aria-hidden="true"></i>
+                    <div class="mdui-list-item-content">Refresh</div>
+                </li>
+            </a>
+            <a href="#">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-icon fa fa-github" aria-hidden="true"></i>
+                    <div class="mdui-list-item-content">View in Github</div>
+                </li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="mdui-container">
+        <div class="mdui-row">
+            <div class="mdui-col-xs-12 mdui-col-md-6" style="background-color: yellowgreen;">
+                <div class="mdui-typo">
+                    <h1>Bubble Sort P</h1>
+                    <p>Please choose, and then</p>
+                </div>
+                <div class="mdui-card mdui-m-y-5">
+                    <div class="mdui-card-header">
+                        <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-cog" aria-hidden="true"></i></div>
+                        <div class="mdui-card-header-title">Setting</div>
+                        <div id="sum" class="mdui-card-header-subtitle">你需要达到的值为 1024 ,当前值为 0 </div>
+                    </div>
+                    <div class="mdui-card-content">
+                        <form method="post">
+                            <label class="mdui-slider mdui-slider-discrete">
+                                <input type="range" step="1" min="2" max="10"/>
+                            </label>
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">Btn1</label>
+                                <input type="text" id="btn1text" class="mdui-textfield-input">
+                            </div>
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">Btn2</label>
+                                <input type="text" id="btn2text" class="mdui-textfield-input">
+                            </div>
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">Btn3</label>
+                                <input type="text" id="btn3text" class="mdui-textfield-input">
+                            </div>
+                            <div class="mdui-textfield mdui-textfield-floating-label">
+                                <label class="mdui-textfield-label">Btn4</label>
+                                <input type="text" id="btn4text" class="mdui-textfield-input">
+                            </div>
+                        </form>
+                    </div>
+                        <div id="btns" class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple" id="btn1" onclick="">Random</button>
+                            <button class="mdui-btn mdui-ripple" id="btn1" onclick="">Confirm</button>
+                        </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MDUI JS -->
+    <script src="js/mdui.min.js"></script>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
