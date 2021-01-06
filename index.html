@@ -23,26 +23,55 @@
             <a href="#">
                 <li class="mdui-list-item mdui-ripple" onclick="location.reload()">
                     <i class="mdui-icon fa fa-refresh" aria-hidden="true"></i>
-                    <div class="mdui-list-item-content">Refresh</div>
+                    <div class="mdui-list-item-content"> Refresh</div>
                 </li>
             </a>
-            <a href="#">
+            <a href="https://github.com/ojhdt/bubble-sort" target="_blank">
                 <li class="mdui-list-item mdui-ripple">
                     <i class="mdui-icon fa fa-github" aria-hidden="true"></i>
-                    <div class="mdui-list-item-content">View in Github</div>
+                    <div class="mdui-list-item-content"> View in Github</div>
                 </li>
             </a>
         </ul>
     </nav>
 
     <div class="mdui-container">
+        <div class="mdui-dialog" id="dialog">
+            <div class="mdui-dialog-title">Bubble Sort Finished</div>
+            <div class="mdui-dialog-content">Now you can check out the result!</div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>OK</button>
+            </div>
+        </div>
         <div class="mdui-row">
             <div class="mdui-typo">
-                <h1>Bubble Sort P</h1>
-                <p>Here is a </p>
+                <h1>Bubble Sort</h1>
+                <p>Here is a sample program showing you how the Bubble Sort works.</br>
+                    To start, you firstly need to select how many numbers you have, then fill the numbers in the form in turn.
+                </p>
             </div>
-            <div class="mdui-col-xs-12 mdui-col-md-5" style="background-color: yellowgreen;">
-                <div class="mdui-card mdui-m-y-5">
+
+            <div class="mdui-col-xs-12 mdui-col-md-12">
+                <div class="mdui-card mdui-m-y-5 mdui-hoverable">
+                    <div class="mdui-card-header">
+                        <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-window-maximize" aria-hidden="true"></i></div>
+                        <div class="mdui-card-header-title">Sorter</div>
+                        <div class="mdui-card-header-subtitle">Enjoy</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        <div id="displayfield">
+                            <!-- <button class="mdui-btn mdui-btn-raised mdui-ripple">Button</button> -->
+                        </div>
+                    </div>
+                        <div class="mdui-card-actions">
+
+                        </div>
+                  </div>
+            </div>
+
+
+            <div class="mdui-col-xs-12 mdui-col-md-5">
+                <div class="mdui-card mdui-m-y-5 mdui-hoverable">
                     <div class="mdui-card-header">
                         <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-cog" aria-hidden="true"></i></div>
                         <div class="mdui-card-header-title">Setting</div>
@@ -51,7 +80,7 @@
                     <div class="mdui-card-content">
                         <form method="post">
                             <label class="mdui-slider mdui-slider-discrete">
-                                <input id="slider" onmouseup="Fresh()" type="range" step="1" min="2" max="10"/>
+                                <input id="slider" onmouseup="Fresh()" type="range" step="1" min="2" max="12"/>
                             </label>
                             <div id="textfield">
                                 <!-- <div class="mdui-textfield mdui-textfield-floating-label">
@@ -62,25 +91,40 @@
                         </form>
                     </div>
                         <div id="btns" class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple" id="btn1" onclick="Random()">Random</button>
-                            <button class="mdui-btn mdui-ripple" id="btn1" onclick="Confirm()">Confirm</button>
+                            <button class="mdui-btn mdui-ripple mdui-color-theme-accent" id="btn1" onclick="Confirm()">Confirm</button>
+                            <button class="mdui-btn mdui-ripple" id="btn2" onclick="Random()">Random</button>
                         </div>
                   </div>
             </div>
 
-            <div class="mdui-col-xs-12 mdui-col-md-7" style="background-color: gold;">
-                <div class="mdui-card mdui-m-y-5">
+            <div class="mdui-col-xs-12 mdui-col-md-7" id="result">
+                <div class="mdui-card mdui-m-y-5 mdui-hoverable">
                     <div class="mdui-card-header">
-                        <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-laptop" aria-hidden="true"></i></div>
-                        <div class="mdui-card-header-title">Sorter</div>
+                        <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-check" aria-hidden="true"></i></div>
+                        <div class="mdui-card-header-title">Result</div>
                         <div class="mdui-card-header-subtitle">Enjoy</div>
                     </div>
                     <div class="mdui-card-content">
-                        <div id="displayfield"></div>
-                    </div>
-                        <div id="btns" class="mdui-card-actions">
 
-                            <button class="mdui-btn mdui-ripple" id="btn1" onclick="Confirm()">Confirm</button>
+                    </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple" id="btn1" onclick="">Confirm</button>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="mdui-col-xs-12 mdui-col-md-7">
+                <div class="mdui-card mdui-m-y-5 mdui-hoverable">
+                    <div class="mdui-card-header">
+                        <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-file-text" aria-hidden="true"></i></div>
+                        <div class="mdui-card-header-title">Log</div>
+                        <div class="mdui-card-header-subtitle">Enjoy</div>
+                    </div>
+                    <div class="mdui-card-content">
+                        <div class="mdui-typo" id="logfield"></div>
+                    </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple" id="btn1" onclick="Clear()">Clear</button>
                         </div>
                   </div>
             </div>
