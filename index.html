@@ -18,7 +18,7 @@
             <a href="https://github.com/ojhdt/bubble-sort" target="_blank" class="mdui-btn mdui-btn-icon"><i class="mdui-icon fa fa-github" aria-hidden="true"></i></a>
         </div>
         </header>
-        <nav class="mdui-drawer" id="main-drawer">
+        <nav class="mdui-drawer mdui-drawer-close" id="main-drawer">
             <ul class="mdui-list" style="max-width: 360px;">
             <a href="#">
                 <li class="mdui-list-item mdui-ripple" onclick="location.reload()">
@@ -46,8 +46,8 @@
         <div class="mdui-row">
             <div class="mdui-typo">
                 <h1>Bubble Sort</h1>
-                <p>Here is a sample program showing you how the Bubble Sort works.</br>
-                    To start, you firstly need to select how many numbers you have, then fill the numbers in the form in turn.
+                <p>Here is a program showing you how the Bubble Sort works.</br>
+                    To start, you firstly need to select how many numbers you have, then fill the numbers in the blanks in turn.
                 </p>
             </div>
 
@@ -56,7 +56,7 @@
                     <div class="mdui-card-header">
                         <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-window-maximize" aria-hidden="true"></i></div>
                         <div class="mdui-card-header-title">Sorter</div>
-                        <div class="mdui-card-header-subtitle">Enjoy</div>
+                        <div class="mdui-card-header-subtitle">The sorting process will be shown here</div>
                     </div>
                     <div class="mdui-card-content">
                         <div id="displayfield">
@@ -70,12 +70,12 @@
             </div>
 
 
-            <div class="mdui-col-xs-12 mdui-col-md-5">
+            <div class="mdui-col-xs-12 mdui-col-md-6">
                 <div class="mdui-card mdui-m-y-5 mdui-hoverable">
                     <div class="mdui-card-header">
                         <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-cog" aria-hidden="true"></i></div>
                         <div class="mdui-card-header-title">Setting</div>
-                        <div class="mdui-card-header-subtitle">Please select, and then</div>
+                        <div class="mdui-card-header-subtitle">Fill in your numbers here</div>
                     </div>
                     <div class="mdui-card-content">
                         <form method="post">
@@ -97,28 +97,58 @@
                   </div>
             </div>
 
-            <div class="mdui-col-xs-12 mdui-col-md-7" id="result">
+            <div class="mdui-col-xs-12 mdui-col-md-6" id="result">
                 <div class="mdui-card mdui-m-y-5 mdui-hoverable">
                     <div class="mdui-card-header">
                         <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-check" aria-hidden="true"></i></div>
                         <div class="mdui-card-header-title">Result</div>
-                        <div class="mdui-card-header-subtitle">Enjoy</div>
+                        <div class="mdui-card-header-subtitle">Some statistics</div>
                     </div>
                     <div class="mdui-card-content">
-
+                        <div class="mdui-list">
+                            <li class="mdui-list-item mdui-ripple">
+                                <div class="mdui-list-item-content">
+                                    <div class="mdui-list-item-title">Maximum value</div>
+                                    <div class="mdui-list-item-text mdui-list-item-one-line" id="listitem1"></div>
+                                </div>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple">
+                                <div class="mdui-list-item-content">
+                                    <div class="mdui-list-item-title">Second largest value</div>
+                                    <div class="mdui-list-item-text mdui-list-item-one-line" id="listitem2"></div>
+                                </div>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple">
+                                <div class="mdui-list-item-content">
+                                    <div class="mdui-list-item-title">Minimum value</div>
+                                    <div class="mdui-list-item-text mdui-list-item-one-line" id="listitem3"></div>
+                                </div>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple">
+                                <div class="mdui-list-item-content">
+                                    <div class="mdui-list-item-title">Sum</div>
+                                    <div class="mdui-list-item-text mdui-list-item-one-line" id="listitem4"></div>
+                                </div>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple">
+                                <div class="mdui-list-item-content">
+                                    <div class="mdui-list-item-title">Average value</div>
+                                    <div class="mdui-list-item-text mdui-list-item-one-line" id="listitem5"></div>
+                                </div>
+                            </li>
+                        </div>
                     </div>
                         <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple" id="btn1" onclick="">Confirm</button>
                         </div>
                   </div>
             </div>
 
-            <div class="mdui-col-xs-12 mdui-col-md-7">
+            <div class="mdui-col-xs-12 mdui-col-md-6">
                 <div class="mdui-card mdui-m-y-5 mdui-hoverable">
                     <div class="mdui-card-header">
                         <div class="mdui-card-header-avatar mdui-valign mdui-m-l-1"><i class="mdui-icon fa fa-file-text" aria-hidden="true"></i></div>
                         <div class="mdui-card-header-title">Log</div>
-                        <div class="mdui-card-header-subtitle">Enjoy</div>
+                        <div class="mdui-card-header-subtitle">Record what the program does</div>
                     </div>
                     <div class="mdui-card-content">
                         <div class="mdui-typo" id="logfield"></div>
