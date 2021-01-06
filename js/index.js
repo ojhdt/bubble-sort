@@ -14,6 +14,9 @@ window.onload = function(){
     result.setAttribute("style", "display:none");
 }
 
+//slider.addEventListener("touchend", Fresh());
+//slider.addEventListener("mouseup", Fresh);
+
 var Rand = function(){
   return Math.round(Math.random() * 100);
 }
