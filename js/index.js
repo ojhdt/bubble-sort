@@ -102,8 +102,8 @@ var Done = function(){
         sum += Number(Array[i]);
     }
     document.getElementById("listitem1").innerHTML = Array[0];
-    document.getElementById("listitem2").innerHTML = Array[Getnum()-1];
-    document.getElementById("listitem3").innerHTML = Array[1];
+    document.getElementById("listitem2").innerHTML = Array[1];
+    document.getElementById("listitem3").innerHTML = Array[Getnum()-1];
     document.getElementById("listitem4").innerHTML = sum;
     document.getElementById("listitem5").innerHTML = sum/Getnum();
 }
